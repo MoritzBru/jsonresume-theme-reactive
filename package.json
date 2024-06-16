@@ -1,0 +1,46 @@
+{
+  "name": "jsonresume-theme-reactive",
+  "description": "A flat and reactive JSON Resume theme.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Moritz Brunnengräber",
+    "email": "mail@moritz-brunnengraeber.de"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MoritzBru/jsonresume-theme-reactive"
+  },
+  "keywords": [
+    "json",
+    "resume",
+    "theme",
+    "cv"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsup src/index.tsx --dts --format esm,cjs --clean",
+    "dev:build": "tsup src/index.tsx --watch",
+    "dev:render": "resumed render resume.json --theme ../../../dist/index.js",
+    "dev:serve": "http-server resume.html",
+    "lint": "eslint .",
+    "prepare": "json2ts node_modules/resume-schema/schema.json schema.d.ts && resumed init",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.1.0",
+    "@eslint/js": "^9.4.0",
+    "@stylistic/eslint-plugin": "^2.1.0",
+    "eslint": "^9.4.0",
+    "globals": "^15.4.0",
+    "http-server": "^14.1.1",
+    "json-schema-to-typescript": "14.0.5",
+    "micromark": "^4.0.0",
+    "resume-schema": "1.0.0",
+    "resumed": "^3.0.1",
+    "static-jsx": "^1.0.1",
+    "tsup": "^8.1.0",
+    "typescript": "5.4.5",
+    "typescript-eslint": "^8.0.0-alpha.30"
+  }
+}
