@@ -19,10 +19,12 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "tsup src/index.tsx --dts --format esm,cjs --clean",
-    "dev:build": "tsup src/index.tsx --watch",
-    "dev:render": "resumed render resume.json --theme ../../../dist/index.js",
-    "dev:serve": "http-server resume.html",
+    "build": "unocss && tsup src/index.tsx --format esm,cjs --dts --clean",
+    "dev:style": "unocss --watch",
+    "dev:build": "tsup src/index.tsx --watch --onSuccess \"resumed render resume.json --theme ../../../dist/index.cjs\"",
+    "ev:render": "resumed render resume.json --theme ../../../dist/index.js",
+    "dev:serve": "http-server . -o /resume.html",
+    "dev": "concurrently npm:dev:* -c auto",
     "lint": "eslint .",
     "prepare": "json2ts node_modules/resume-schema/schema.json schema.d.ts && resumed init",
     "prepublishOnly": "npm run build"
@@ -30,17 +32,23 @@
   "devDependencies": {
     "@eslint/compat": "^1.1.0",
     "@eslint/js": "^9.4.0",
+    "@iconify-json/ph": "^1.1.13",
     "@stylistic/eslint-plugin": "^2.1.0",
+    "@unocss/eslint-config": "^0.61.0",
+    "@unocss/postcss": "^0.61.0",
+    "concurrently": "^8.2.2",
     "eslint": "^9.4.0",
     "globals": "^15.4.0",
     "http-server": "^14.1.1",
     "json-schema-to-typescript": "14.0.5",
     "micromark": "^4.0.0",
+    "postcss": "^8.4.38",
     "resume-schema": "1.0.0",
     "resumed": "^3.0.1",
     "static-jsx": "^1.0.1",
     "tsup": "^8.1.0",
     "typescript": "5.4.5",
-    "typescript-eslint": "^8.0.0-alpha.30"
+    "typescript-eslint": "^8.0.0-alpha.30",
+    "unocss": "^0.61.0"
   }
 }

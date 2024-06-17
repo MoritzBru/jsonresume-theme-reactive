@@ -15,6 +15,7 @@ schema.d.ts
 resume.json
 resume.*.json
 resume.html
+style.txt
 
 # Editor directories and files
 .idea

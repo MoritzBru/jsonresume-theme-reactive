@@ -3,4 +3,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
+  "tailwindCSS.experimental.configFile": "uno.config.ts"
 }

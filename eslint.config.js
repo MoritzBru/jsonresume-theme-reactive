@@ -2,6 +2,7 @@ import globals from 'globals';
 import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
+import unocss from '@unocss/eslint-config/flat';
 import { includeIgnoreFile } from '@eslint/compat';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -15,6 +16,7 @@ export default [
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
+  unocss,
   stylistic.configs.customize({
     indent: 2,
     quotes: 'single',
