@@ -11,11 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
-schema.d.ts
+
+resumeSchema.d.ts
 resume.json
 resume.*.json
 resume.html
-style.txt
 
 # Editor directories and files
 .idea

@@ -1,9 +1,7 @@
 import { RawHtml } from 'static-jsx';
-import type { ResumeSchema } from '../schema.d.ts';
-// @ts-expect-error no declaration for txt import
-import style from '../style.txt';
+import type { ResumeSchema } from '../resumeSchema.d.ts';
 
-const Resume = ({ resume }: { resume: ResumeSchema }) => (
+const Resume = ({ resume, style }: { resume: ResumeSchema; style: string }) => (
   <>
     {new RawHtml('<!DOCTYPE html>')}
     <html lang="en">
@@ -14,13 +12,13 @@ const Resume = ({ resume }: { resume: ResumeSchema }) => (
         <meta name="description" content={resume.basics?.summary} />
         <style>{new RawHtml(style)}</style>
       </head>
-      <body class="bg-base-light text-content-light dark:bg-base-dark dark:text-content-dark text-sm font-sans">
+      <body class="bg-base-light text-sm text-content-light font-sans dark:bg-base-dark dark:text-content-dark">
         <main class="mx-auto max-w-[210mm] p-5">
           Hello,
           { resume.basics?.name }
           !
-          <div class="animate-bounce-alt animate-duration-1s animate-count-infinite text-5xl text-red-500 fw100">
-            UnoCSS
+          <div class="animate-bounce-alt animate-duration-1s animate-count-infinite text-5xl text-green-500 fw100">
+            UnoCSS is so cool
           </div>
           <div class="i-ph-cow-duotone" />
 
