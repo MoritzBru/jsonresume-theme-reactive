@@ -19,10 +19,8 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --shims --clean",
-    "dev:build": "tsup src/index.tsx --watch --onSuccess \"resumed render resume.json --theme ../../../dist/index.cjs\"",
-    "dev:serve": "http-server . -o /resume.html",
-    "dev": "concurrently npm:dev:* -c auto",
+    "build": "tsup src/index.ts --format esm,cjs --dts --shims --clean",
+    "dev": "tsup src/index.ts --watch --onSuccess \"resumed render resume.json --theme ../../../dist/index.cjs\"",
     "lint": "eslint .",
     "prepare": "json2ts node_modules/resume-schema/schema.json resumeSchema.d.ts && resumed init",
     "prepublishOnly": "npm run build"

@@ -5,7 +5,7 @@ A flat and reactive [JSON Resume](https://jsonresume.org/) theme.
 - 🤖 strongly typed with TypeScript and TSX
 - 💅 styled with UnoCSS
 - 📄 Markdown support
-- 🌗 Light and dark mode
+- 🌗 Light and dark mode (TODO)
 - 🎨 Customizable colors
 - 📦 ESM and CommonJS builds
 
@@ -54,7 +54,6 @@ npx resumed render --theme jsonresume-theme-reactive
 ### Change colors
 
 You can override theme colors in your _resume.json_ under `meta.themeOptions.colors`.
-Each entry defines a tuple of light and (optional) dark color values. If only one value is defined, it will be used in both light and dark mode.
 
 ```jsonc
 {
@@ -63,11 +62,8 @@ Each entry defines a tuple of light and (optional) dark color values. If only on
     "theme": "jsonresume-theme-reactive",
     "themeOptions": {
       "colors": {
-        "background": ["#ffffff", "#191e23"],
-        "dimmed": ["#f3f4f5", "#23282d"],
-        "primary": ["#191e23", "#fbfbfc"],
-        "secondary": ["#6c7781", "#ccd0d4"],
-        "accent": ["#0073aa", "#00a0d2"]
+        "primary": "#3F51B5",
+        "secondary": "#AD1457",
       }
     }
     // ...

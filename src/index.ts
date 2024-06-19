@@ -1,15 +1,14 @@
 import { resolve } from 'node:path';
 import { readFileSync } from 'node:fs';
-import '@unocss/reset/normalize.css';
+import '@unocss/reset/tailwind.css';
 import './style.css';
 import type { ResumeSchema } from '../resumeSchema.d.ts';
-import Resume from './resume';
+import { jsx } from 'static-jsx';
+import Resume from './Resume';
 
 const style = readFileSync(resolve(__dirname, './index.css'), 'utf-8');
 
 export const render = (resume: ResumeSchema) => {
-  const rendered = (
-    <Resume resume={resume} style={style} />
-  );
+  const rendered = jsx(Resume, { resume, style });
   return rendered.html;
 };

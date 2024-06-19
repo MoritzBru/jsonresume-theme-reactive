@@ -25,7 +25,7 @@
     ],
     // JSX/TSX stuff
     "jsx": "react-jsx",
-    "jsxImportSource": "static-jsx"
+    "jsxImportSource": "static-jsx",
   },
   "include": [
     "src",
