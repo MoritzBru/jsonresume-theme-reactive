@@ -20,7 +20,7 @@
   "type": "module",
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --shims --clean",
-    "dev": "tsup src/index.ts --watch --onSuccess \"resumed render resume.json --theme ../../../dist/index.cjs\"",
+    "dev": "tsup src/index.ts --watch --onSuccess \"resumed render resume.sample.json --theme ../../../dist/index.cjs && http-server\"",
     "lint": "eslint .",
     "prepare": "json2ts node_modules/resume-schema/schema.json resumeSchema.d.ts && resumed init",
     "prepublishOnly": "npm run build"
@@ -29,7 +29,7 @@
     "@eslint/compat": "^1.1.0",
     "@eslint/js": "^9.5.0",
     "@iconify-json/ph": "^1.1.13",
-    "@stylistic/eslint-plugin": "^2.2.1",
+    "@stylistic/eslint-plugin": "^2.2.2",
     "@unocss/eslint-config": "^0.61.0",
     "@unocss/postcss": "^0.61.0",
     "concurrently": "^8.2.2",
@@ -43,7 +43,7 @@
     "resumed": "^3.0.1",
     "static-jsx": "^1.0.1",
     "tsup": "^8.1.0",
-    "typescript": "5.4.5",
+    "typescript": "5.5.2",
     "typescript-eslint": "^8.0.0-alpha.30",
     "unocss": "^0.61.0"
   }

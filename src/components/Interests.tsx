@@ -2,7 +2,7 @@ import type { ResumeSchema } from '../../resumeSchema.d.ts';
 
 const Interest = (interest: Exclude<ResumeSchema['interests'], undefined>[number]) => (
   <div>
-    {interest?.name && <h3 class="font-bold opacity-75">{interest.name}</h3>}
+    {interest.name && <h3 class="font-bold opacity-75">{interest.name}</h3>}
     {interest.keywords?.length && <p class="font-light">{interest.keywords.join(', ')}</p>}
   </div>
 );

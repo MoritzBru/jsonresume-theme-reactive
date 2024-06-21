@@ -2,7 +2,7 @@ import type { ResumeSchema } from '../../resumeSchema.d.ts';
 
 const Language = (language: Exclude<ResumeSchema['languages'], undefined>[number]) => (
   <div>
-    {language?.language && <h3 class="font-bold opacity-75">{language.language}</h3>}
+    {language.language && <h3 class="font-bold opacity-75">{language.language}</h3>}
     {language.fluency && <p class="font-light">{language.fluency}</p>}
   </div>
 );

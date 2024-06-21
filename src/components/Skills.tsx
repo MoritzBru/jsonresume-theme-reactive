@@ -2,8 +2,8 @@ import type { ResumeSchema } from '../../resumeSchema.d.ts';
 
 const Skill = (skill: Exclude<ResumeSchema['skills'], undefined>[number]) => (
   <div>
-    {skill?.name && <h3 class="font-bold opacity-75">{skill.name}</h3>}
-    {skill?.keywords?.length && <p class="font-light">{skill.keywords.join(', ')}</p>}
+    {skill.name && <h3 class="font-bold opacity-75">{skill.name}</h3>}
+    {skill.keywords?.length && <p class="font-light">{skill.keywords.join(', ')}</p>}
   </div>
 );
 

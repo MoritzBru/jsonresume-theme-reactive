@@ -6,6 +6,7 @@ import Basics from './components/Basics';
 import Skills from './components/Skills';
 import Languages from './components/Languages';
 import Interests from './components/Interests';
+import References from './components/References';
 import Summary from './components/Summary';
 
 const Resume = ({ resume, style }: { resume: ResumeSchema; style: string }) => (
@@ -25,6 +26,7 @@ const Resume = ({ resume, style }: { resume: ResumeSchema; style: string }) => (
             <Skills skills={resume?.skills} />
             <Languages languages={resume?.languages} />
             <Interests interests={resume?.interests} />
+            <References references={resume?.references} />
           </div>
           <div class="right">
             <Summary basics={resume?.basics} />
