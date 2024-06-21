@@ -2,10 +2,12 @@
 
 A flat and reactive [JSON Resume](https://jsonresume.org/) theme.
 
-- 🤖 strongly typed with TypeScript and TSX
+- 🤖 strongly typed with TypeScript
+- 📑 templated with JSX/TSX
 - 💅 styled with UnoCSS
 - 📄 Markdown support
-- 🌗 Light and dark mode (TODO)
+- 🌗 Light and dark mode
+- 📱 Responsive design
 - 🎨 Customizable colors
 - 📦 ESM and CommonJS builds
 
@@ -78,4 +80,9 @@ This project is heavily inspired by and relies on other awesome projects:
 - [JSON Resume](https://jsonresume.org/)
 - [JSON Resume Schema](https://github.com/jsonresume/resume-schema)
 - [jsonresume-theme-even](https://github.com/rbardini/jsonresume-theme-even)
-- [Resumed](https://github.com/rbardini/resumed)
+
+## ✅ TODOs
+
+- light/dark mode
+- responsive design
+- testing
