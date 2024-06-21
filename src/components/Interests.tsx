@@ -1,4 +1,5 @@
 import type { ResumeSchema } from '../../resumeSchema.d.ts';
+import SectionHeading from './helper/SectionHeading.js';
 
 const Interest = (interest: Exclude<ResumeSchema['interests'], undefined>[number]) => (
   <div>
@@ -11,8 +12,7 @@ const Interests = ({ interests }: { interests: ResumeSchema['interests'] }) => (
   <>
     { interests?.length && (
       <section class="m-4">
-        <h2 class="text-lg">Interests</h2>
-        <hr class="border-t-2 border-secondary" />
+        <SectionHeading>Interests</SectionHeading>
         <dl class="grid grid-cols-2 mt-2 gap-2 [&>*:nth-child(odd):last-child]:col-span-2">
           { interests.map((interest) => Interest(interest))}
         </dl>
