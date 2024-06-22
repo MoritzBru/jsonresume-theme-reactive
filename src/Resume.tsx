@@ -9,6 +9,7 @@ import Interests from './components/Interests';
 import References from './components/References';
 import Summary from './components/Summary';
 import Work from './components/Work';
+import Education from './components/Education';
 import Volunteer from './components/Volunteer';
 
 const Resume = ({ resume, style }: { resume: ResumeSchema; style: string }) => (
@@ -33,6 +34,7 @@ const Resume = ({ resume, style }: { resume: ResumeSchema; style: string }) => (
           <div class="right">
             <Summary basics={resume?.basics} />
             <Work work={resume?.work} />
+            <Education education={resume?.education} />
             <Volunteer volunteer={resume?.volunteer} />
           </div>
         </main>
