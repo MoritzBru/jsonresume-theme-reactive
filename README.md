@@ -86,3 +86,4 @@ This project is heavily inspired by and relies on other awesome projects:
 - light/dark mode
 - responsive design
 - testing
+- i18n
