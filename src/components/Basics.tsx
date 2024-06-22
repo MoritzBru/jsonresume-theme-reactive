@@ -1,7 +1,7 @@
 import type { ResumeSchema } from '../../resumeSchema.d.ts';
 
 const Basics = ({ basics }: { basics: ResumeSchema['basics'] }) => (
-  <section class="bg-primary-500 p-4 text-white">
+  <header class="bg-primary-500 p-4 text-white">
     { basics?.image && <img src={basics.image} class="mx-auto w-4/5 border-2 border-white rounded-full" /> }
     { basics?.name && <h1 class="mt-2 text-lg font-bold">{basics.name}</h1> }
     { basics?.label && <h2 class="text-md">{basics.label}</h2> }
@@ -41,7 +41,7 @@ const Basics = ({ basics }: { basics: ResumeSchema['basics'] }) => (
         ))
       )}
     </div>
-  </section>
+  </header>
 );
 
 export default Basics;

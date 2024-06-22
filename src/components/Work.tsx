@@ -3,13 +3,16 @@ import { RawHtml } from 'static-jsx';
 import { md2html } from '../utils/converte';
 import SectionHeading from './helper/SectionHeading.js';
 import TimeRange from './helper/TimeRange.js';
+import MaybeLink from './helper/MaybeLink.js';
 
 const Position = (position: Exclude<ResumeSchema['work'], undefined>[number]) => (
-  <details open>
-    <summary class="flex justify-between">
-      {position.name && <span class="font-bold">{position.name}</span>}
+  <article>
+    <header class="flex justify-between">
+      <MaybeLink url={position.url}>
+        <span class="font-bold">{position.name}</span>
+      </MaybeLink>
       {position.startDate && <TimeRange startDate={position.startDate} endDate={position.endDate} />}
-    </summary>
+    </header>
     <div>
       <div class="flex justify-between">
         {position.position && <p class="">{position.position}</p>}
@@ -21,7 +24,7 @@ const Position = (position: Exclude<ResumeSchema['work'], undefined>[number]) =>
         </div>
       )}
     </div>
-  </details>
+  </article>
 );
 
 const Work = ({ work }: { work: ResumeSchema['work'] }) => (
