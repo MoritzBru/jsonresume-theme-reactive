@@ -27,7 +27,7 @@ const Basics = ({ basics }: { basics: ResumeSchema['basics'] }) => (
       { basics?.url && (
         <div class="flex items-center gap-x-2">
           <div class="i-ph-cursor-duotone size-4" />
-          <a href={basics.url}>{new URL(basics.url).hostname.replace('www.', '')}</a>
+          <a href={basics.url} target="_blank">{new URL(basics.url).hostname.replace('www.', '')}</a>
         </div>
       )}
       { basics?.profiles && (
@@ -35,7 +35,7 @@ const Basics = ({ basics }: { basics: ResumeSchema['basics'] }) => (
           <div class="flex items-center gap-x-2">
             <div class={`i-ph-${profile.network?.toLowerCase()}-logo-duotone size-4`} />
             { profile.url
-              ? <a href={profile.url}>{profile.username}</a>
+              ? <a href={profile.url} target="_blank">{profile.username}</a>
               : profile.username}
           </div>
         ))
