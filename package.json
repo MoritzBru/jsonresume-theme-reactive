@@ -20,7 +20,7 @@
   "type": "module",
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --shims --clean",
-    "dev": "tsup src/index.ts --watch --onSuccess \"resumed render resume.sample.json --theme ../../../dist/index.cjs && http-server\"",
+    "dev": "tsup src/index.ts --watch --onSuccess \"resumed render resume.json --theme ../../../dist/index.cjs && http-server\"",
     "lint": "eslint .",
     "prepare": "json2ts node_modules/resume-schema/schema.json resumeSchema.d.ts && resumed init",
     "prepublishOnly": "npm run build"

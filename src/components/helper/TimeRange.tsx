@@ -1,7 +1,7 @@
 import { formatDate } from '../../utils/formatters.js';
 
 const TimeRange = ({ startDate, endDate }: { startDate: string; endDate?: string }) => (
-  <div class="font-bold font-mono opacity-75">
+  <div class="time">
     <time datetime={startDate}>
       {formatDate(startDate)}
     </time>

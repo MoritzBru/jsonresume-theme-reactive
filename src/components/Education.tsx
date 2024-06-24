@@ -5,22 +5,22 @@ import MaybeLink from './helper/MaybeLink.js';
 
 const Position = (position: Exclude<ResumeSchema['education'], undefined>[number]) => (
   <article>
-    <header class="flex justify-between">
-      <p class="flex gap-1">
-        {position.studyType && <span>{position.studyType}</span>}
-        {position.area && <span class="font-bold">{position.area}</span>}
-      </p>
+    <header class="between">
+      {position.institution && (
+        <h3 class="font-bold">
+          <MaybeLink url={position.url}>{position.institution}</MaybeLink>
+        </h3>
+      )}
       {position.startDate && <TimeRange startDate={position.startDate} endDate={position.endDate} />}
     </header>
-    <div>
-      { position.institution && (
-        <MaybeLink url={position.url}>
-          <span class="font-bold opacity-75">{position.institution}</span>
-        </MaybeLink>
-      )}
-      { position.score && (<p class="font-light">{position.score}</p>)}
-      { position.courses?.length && (
-        <ul class="ml-4 mt-1 list-disc list-outside font-light leading-tight marker:text-secondary">
+    <div class="between">
+      {position.studyType && <p class="subheading">{position.studyType}</p>}
+      {position.area && <p>{position.area}</p>}
+    </div>
+    <div class="mt-0.5 flex flex-col gap-y-0.5">
+      {position.score && (<p class="font-light">{position.score}</p>)}
+      {position.courses?.length && (
+        <ul class="list">
           {position.courses.map((course) => <li>{course}</li>)}
         </ul>
       )}
@@ -30,11 +30,11 @@ const Position = (position: Exclude<ResumeSchema['education'], undefined>[number
 
 const Education = ({ education }: { education: ResumeSchema['education'] }) => (
   <>
-    { education?.length && (
+    {education?.length && (
       <section class="m-4">
         <SectionHeading>Education</SectionHeading>
-        <div class="mt-2 flex flex-col gap-2">
-          { education.map((education) => Position(education))}
+        <div class="array">
+          {education.map((education) => Position(education))}
         </div>
       </section>
     )}

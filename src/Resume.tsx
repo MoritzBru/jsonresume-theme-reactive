@@ -24,18 +24,18 @@ const Resume = ({ resume, style }: { resume: ResumeSchema; style: string }) => (
         <style>{new RawHtml(style)}</style>
         <Theme meta={resume?.meta} />
       </head>
-      <body class="bg-white text-[13px] text-black font-sans">
-        <hr class="absolute top-[297mm] w-full border-dashed print:hidden" />
-        <main class="grid grid-cols-[1fr_2fr] mx-auto max-w-[210mm] min-h-[297mm]">
+      <body class="bg-white text-black font-sans text-base">
+        <main class="grid mx-auto max-w-[210mm] min-h-[297mm] md:grid-cols-[1fr_2fr]">
           <div class="bg-primary-200 text-black">
             <Basics basics={resume?.basics} />
+            <Summary basics={resume?.basics} className="block md:hidden" />
             <Skills skills={resume?.skills} />
             <Languages languages={resume?.languages} />
             <Interests interests={resume?.interests} />
             <References references={resume?.references} />
           </div>
           <div>
-            <Summary basics={resume?.basics} />
+            <Summary basics={resume?.basics} className="hidden md:block" />
             <Work work={resume?.work} />
             <Projects projects={resume?.projects} />
             <Education education={resume?.education} />

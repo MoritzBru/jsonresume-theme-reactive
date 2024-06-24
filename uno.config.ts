@@ -22,6 +22,19 @@ export default defineConfig({
       },
     }),
   ],
+  rules: [
+    ['text-base', { 'font-size': '10pt' }],
+    ['text-lg', { 'font-size': '11pt' }],
+    ['text-xl', { 'font-size': '13pt' }],
+  ],
+  shortcuts: {
+    array: 'mt-2 flex flex-col gap-2',
+    between: 'flex justify-between gap-x-1',
+    list: 'ml-4 mt-1 list-disc list-outside font-light leading-tight marker:text-secondary',
+    subheading: 'font-bold opacity-75',
+    summary: 'mt-1 text-justify text-pretty font-light leading-tight',
+    time: 'shrink-0 font-bold font-mono opacity-75',
+  },
   safelist: [
     // icons for basics.profile
     ...['behance', 'codepen', 'codesandbox', 'dev-to', 'discord', 'dribbble', 'facebook', 'github', 'gitlab', 'instagram', 'linkedin', 'linktree', 'mastodon', 'medium', 'notion', 'patreon', 'pinterest', 'reddit', 'replit', 'skype', 'slack', 'snapchat', 'soundcloud', 'spotify', 'stack-overflow', 'telegram', 'threads', 'tiktok', 'twitch', 'twitter', 'wechat', 'whatsapp', 'x', 'youtube'].map((brand) => `i-ph-${brand}-logo-duotone`),

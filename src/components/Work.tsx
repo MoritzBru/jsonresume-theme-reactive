@@ -7,27 +7,27 @@ import MaybeLink from './helper/MaybeLink.js';
 
 const Position = (position: Exclude<ResumeSchema['work'], undefined>[number]) => (
   <article>
-    <header class="flex justify-between">
-      {position.position && <p class="font-bold">{position.position}</p>}
+    <header class="between">
+      {position.position && <h3 class="font-bold">{position.position}</h3>}
       {position.startDate && <TimeRange startDate={position.startDate} endDate={position.endDate} />}
     </header>
     <div>
-      <div class="flex justify-between">
+      <div class="between">
         {position.name && (
           <MaybeLink url={position.url}>
-            <span class="font-bold opacity-75">{position.name}</span>
+            <span class="subheading">{position.name}</span>
           </MaybeLink>
         )}
         {position.location && <p class="opacity-75">{position.location}</p>}
       </div>
-      { position.description && (<p class="font-light leading-tight">{position.description}</p>)}
-      { position.summary && (
-        <div class="mt-1 text-justify text-pretty font-light leading-tight">
+      {position.description && (<p class="font-light leading-tight">{position.description}</p>)}
+      {position.summary && (
+        <div class="summary">
           {new RawHtml(md2html(position.summary))}
         </div>
       )}
-      { position.highlights?.length && (
-        <ul class="ml-4 mt-1 list-disc list-outside font-light leading-tight marker:text-secondary">
+      {position.highlights?.length && (
+        <ul class="list">
           {position.highlights.map((highlight) => <li>{highlight}</li>)}
         </ul>
       )}
@@ -37,11 +37,11 @@ const Position = (position: Exclude<ResumeSchema['work'], undefined>[number]) =>
 
 const Work = ({ work }: { work: ResumeSchema['work'] }) => (
   <>
-    { work?.length && (
+    {work?.length && (
       <section class="m-4">
         <SectionHeading>Work</SectionHeading>
-        <div class="mt-2 flex flex-col gap-2">
-          { work.map((position) => Position(position))}
+        <div class="array">
+          {work.map((position) => Position(position))}
         </div>
       </section>
     )}

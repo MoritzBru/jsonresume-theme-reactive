@@ -30,7 +30,7 @@ const getColorVariables = (colors?: ThemeColors) => Object.entries({
 
 const Theme = ({ meta }: { meta?: ResumeSchema['meta'] & ThemeOptions }) => (
   <style>
-    { new RawHtml(`:root { ${getColorVariables(meta?.themeOptions?.colors)} }`)}
+    {new RawHtml(`:root { ${getColorVariables(meta?.themeOptions?.colors)} }`)}
   </style>
 );
 
