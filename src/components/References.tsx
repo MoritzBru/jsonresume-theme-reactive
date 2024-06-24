@@ -6,7 +6,7 @@ import SectionHeading from './helper/SectionHeading.js';
 const Reference = (reference: Exclude<ResumeSchema['references'], undefined>[number]) => (
   <blockquote>
     {reference.name && <cite class="font-bold font-not-italic opacity-75">{reference.name}</cite>}
-    {reference.reference && <div class="font-light">{new RawHtml(md2html(reference.reference))}</div>}
+    {reference.reference && <div class="border-l-2 border-black/20 pl-1 font-light">{new RawHtml(md2html(reference.reference))}</div>}
   </blockquote>
 );
 
