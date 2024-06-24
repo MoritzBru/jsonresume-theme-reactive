@@ -12,9 +12,11 @@ const Position = (position: Exclude<ResumeSchema['volunteer'], undefined>[number
       {position.startDate && <TimeRange startDate={position.startDate} endDate={position.endDate} />}
     </header>
     <div>
-      <MaybeLink url={position.url}>
-        <span class="font-bold opacity-75">{position.organization}</span>
-      </MaybeLink>
+      { position.organization && (
+        <MaybeLink url={position.url}>
+          <span class="font-bold opacity-75">{position.organization}</span>
+        </MaybeLink>
+      )}
       { position.description && (<p class="font-light leading-tight">{position.description}</p>)}
       { position.summary && (
         <div class="mt-1 text-justify text-pretty font-light leading-tight">

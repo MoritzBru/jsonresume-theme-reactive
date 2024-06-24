@@ -13,9 +13,11 @@ const Position = (position: Exclude<ResumeSchema['work'], undefined>[number]) =>
     </header>
     <div>
       <div class="flex justify-between">
-        <MaybeLink url={position.url}>
-          <span class="font-bold opacity-75">{position.name}</span>
-        </MaybeLink>
+        {position.name && (
+          <MaybeLink url={position.url}>
+            <span class="font-bold opacity-75">{position.name}</span>
+          </MaybeLink>
+        )}
         {position.location && <p class="opacity-75">{position.location}</p>}
       </div>
       { position.description && (<p class="font-light leading-tight">{position.description}</p>)}

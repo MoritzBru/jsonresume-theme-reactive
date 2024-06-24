@@ -13,9 +13,11 @@ const Position = (position: Exclude<ResumeSchema['education'], undefined>[number
       {position.startDate && <TimeRange startDate={position.startDate} endDate={position.endDate} />}
     </header>
     <div>
-      <MaybeLink url={position.url}>
-        <span class="font-bold opacity-75">{position.institution}</span>
-      </MaybeLink>
+      { position.institution && (
+        <MaybeLink url={position.url}>
+          <span class="font-bold opacity-75">{position.institution}</span>
+        </MaybeLink>
+      )}
       { position.score && (<p class="font-light">{position.score}</p>)}
       { position.courses?.length && (
         <ul class="ml-4 mt-1 list-disc list-outside font-light leading-tight marker:text-secondary">
