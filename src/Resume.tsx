@@ -12,6 +12,8 @@ import Work from './components/Work';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Volunteer from './components/Volunteer';
+import Awards from './components/Awards';
+import Publications from './components/Publications';
 
 const Resume = ({ resume, style }: { resume: ResumeSchema; style: string }) => (
   <>
@@ -32,12 +34,14 @@ const Resume = ({ resume, style }: { resume: ResumeSchema; style: string }) => (
             <Interests interests={resume?.interests} />
             <References references={resume?.references} />
           </div>
-          <div class="right">
+          <div>
             <Summary basics={resume?.basics} />
             <Work work={resume?.work} />
             <Projects projects={resume?.projects} />
             <Education education={resume?.education} />
             <Volunteer volunteer={resume?.volunteer} />
+            <Awards awards={resume?.awards} />
+            <Publications publications={resume?.publications} />
           </div>
         </main>
       </body>
