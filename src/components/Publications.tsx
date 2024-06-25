@@ -4,6 +4,7 @@ import { md2html } from '../utils/converte';
 import { formatDate } from '../utils/formatters.js';
 import SectionHeading from './helper/SectionHeading.js';
 import MaybeLink from './helper/MaybeLink.js';
+import { i18n } from './Theme';
 
 const Publication = (publication: Exclude<ResumeSchema['publications'], undefined>[number]) => (
   <article>
@@ -30,7 +31,7 @@ const Publications = ({ publications }: { publications: ResumeSchema['publicatio
   <>
     {publications?.length && (
       <section class="m-4">
-        <SectionHeading>Publications</SectionHeading>
+        <SectionHeading>{i18n['sections.publications']}</SectionHeading>
         <div class="array">
           {publications.map((publication) => Publication(publication))}
         </div>

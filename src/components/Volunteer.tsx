@@ -4,6 +4,7 @@ import { md2html } from '../utils/converte';
 import SectionHeading from './helper/SectionHeading.js';
 import TimeRange from './helper/TimeRange.js';
 import MaybeLink from './helper/MaybeLink.js';
+import { i18n } from './Theme';
 
 const Position = (position: Exclude<ResumeSchema['volunteer'], undefined>[number]) => (
   <article>
@@ -36,7 +37,7 @@ const Volunteer = ({ volunteer }: { volunteer: ResumeSchema['volunteer'] }) => (
   <>
     {volunteer?.length && (
       <section class="m-4">
-        <SectionHeading>Volunteer</SectionHeading>
+        <SectionHeading>{i18n['sections.volunteer']}</SectionHeading>
         <div class="array">
           {volunteer.map((volunteer) => Position(volunteer))}
         </div>

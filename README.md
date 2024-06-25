@@ -9,7 +9,8 @@ A flat and reactive [JSON Resume](https://jsonresume.org/) theme.
 - 🌗 Light and dark mode
 - 📱 Responsive design
 - 🎨 Customizable colors
-- 📦 ESM and CommonJS builds
+- 💬 Customizable labels
+- 📦 ESM and CommonJS build
 
 ## 📦 Installation
 
@@ -61,11 +62,38 @@ You can override theme colors in your _resume.json_ under `meta.themeOptions.col
 {
   // ...
   "meta": {
-    "theme": "jsonresume-theme-reactive",
     "themeOptions": {
       "colors": {
         "primary": "#3F51B5",
         "secondary": "#AD1457",
+      }
+    }
+    // ...
+  }
+}
+```
+
+### Change labels
+
+You can override theme labels in your _resume.json_ under `meta.themeOptions.i18n`.
+
+```jsonc
+{
+  // ...
+  "meta": {
+    "themeOptions": {
+      "i18n": {
+        "sections.awards": "Awards",
+        "sections.education": "Education",
+        "sections.interests": "Interests",
+        "sections.languages": "Languages",
+        "sections.projects": "Projects",
+        "sections.publications": "Publications",
+        "sections.references": "References",
+        "sections.skills": "Skills",
+        "sections.volunteer": "Volunteer",
+        "sections.work": "Work",
+        "timeRange.openEnd": "Present"
       }
     }
     // ...
@@ -80,10 +108,3 @@ This project is heavily inspired by and relies on other awesome projects:
 - [JSON Resume](https://jsonresume.org/)
 - [JSON Resume Schema](https://github.com/jsonresume/resume-schema)
 - [jsonresume-theme-even](https://github.com/rbardini/jsonresume-theme-even)
-
-## ✅ TODOs
-
-- light/dark mode
-- responsive design
-- testing
-- i18n

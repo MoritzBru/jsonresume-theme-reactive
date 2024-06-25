@@ -2,6 +2,7 @@ import type { ResumeSchema } from '../../resumeSchema.d.ts';
 import SectionHeading from './helper/SectionHeading.js';
 import TimeRange from './helper/TimeRange.js';
 import MaybeLink from './helper/MaybeLink.js';
+import { i18n } from './Theme';
 
 const Project = (project: Exclude<ResumeSchema['projects'], undefined>[number]) => (
   <article>
@@ -41,7 +42,7 @@ const Projects = ({ projects }: { projects: ResumeSchema['projects'] }) => (
   <>
     {projects?.length && (
       <section class="m-4">
-        <SectionHeading>Projects</SectionHeading>
+        <SectionHeading>{i18n['sections.projects']}</SectionHeading>
         <div class="array">
           {projects.map((project) => Project(project))}
         </div>

@@ -2,6 +2,7 @@ import type { ResumeSchema } from '../../resumeSchema.d.ts';
 import { RawHtml } from 'static-jsx';
 import { md2html } from '../utils/converte';
 import SectionHeading from './helper/SectionHeading.js';
+import { i18n } from './Theme';
 
 const Reference = (reference: Exclude<ResumeSchema['references'], undefined>[number]) => (
   <blockquote>
@@ -14,7 +15,7 @@ const References = ({ references }: { references: ResumeSchema['references'] }) 
   <>
     {references?.length && (
       <section class="m-4">
-        <SectionHeading>References</SectionHeading>
+        <SectionHeading>{i18n['sections.references']}</SectionHeading>
         <div class="array">
           {references.map((reference) => Reference(reference))}
         </div>

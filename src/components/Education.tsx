@@ -2,6 +2,7 @@ import type { ResumeSchema } from '../../resumeSchema.d.ts';
 import SectionHeading from './helper/SectionHeading.js';
 import TimeRange from './helper/TimeRange.js';
 import MaybeLink from './helper/MaybeLink.js';
+import { i18n } from './Theme';
 
 const Position = (position: Exclude<ResumeSchema['education'], undefined>[number]) => (
   <article>
@@ -32,7 +33,7 @@ const Education = ({ education }: { education: ResumeSchema['education'] }) => (
   <>
     {education?.length && (
       <section class="m-4">
-        <SectionHeading>Education</SectionHeading>
+        <SectionHeading>{i18n['sections.education']}</SectionHeading>
         <div class="array">
           {education.map((education) => Position(education))}
         </div>
