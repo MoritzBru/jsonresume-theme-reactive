@@ -12,6 +12,10 @@ A flat and reactive [JSON Resume](https://jsonresume.org/) theme.
 - 💬 Customizable labels
 - 📦 ESM and CommonJS build
 
+## 🖼️ Example
+
+<img src="/.github/assets/example-resume.png" alt="Example Resume" width="198" height="297"  />
+
 ## 📦 Installation
 
 Install the package with your preferred package manager (e.g. `npm`)
