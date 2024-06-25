@@ -29,11 +29,7 @@ const Project = (project: Exclude<ResumeSchema['projects'], undefined>[number]) 
           {project.highlights.map((highlight) => <li>{highlight}</li>)}
         </ul>
       )}
-      {project.keywords?.length && (
-        <ul class="flex flex-wrap gap-1 font-light">
-          {project.keywords.map((keyword) => <li class="rounded-full bg-neutral-100 px-1.5 py-0.5">{keyword}</li>)}
-        </ul>
-      )}
+      {project.keywords?.length && <p class="font-light">{project.keywords.join(', ')}</p>}
     </div>
   </article>
 );

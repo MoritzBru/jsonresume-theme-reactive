@@ -6,7 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 
 ## [Unreleased]
 
-Nothing yet
+### Changed
+
+- Unified rendering of projects keywords
 
 ## [0.1.0] - 2024-06-25
 
