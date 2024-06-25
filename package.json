@@ -1,7 +1,7 @@
 {
   "name": "jsonresume-theme-reactive",
   "description": "A flat and reactive JSON Resume theme.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Moritz Brunnengräber",
     "email": "mail@moritz-brunnengraeber.de"
