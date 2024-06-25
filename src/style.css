@@ -1,5 +1,9 @@
 @unocss;
 
+:root {
+  color-scheme: light dark;
+}
+
 @media print {
   @page {
     size: A4;

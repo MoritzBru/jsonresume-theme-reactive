@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 ### Changed
 
 - Unified rendering of projects keywords
+- Fixed color-scheme
 
 ## [0.1.0] - 2024-06-25
 
