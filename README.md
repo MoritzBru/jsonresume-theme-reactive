@@ -1,5 +1,9 @@
 # jsonresume-theme-reactive
 
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/moritzbru/jsonresume-theme-reactive/npm-publish.yml?style=flat-square&logo=github&label=pipeline)](https://github.com/MoritzBru/jsonresume-theme-reactive/actions/workflows/npm-publish.yml)
+[![GitHub Tag](https://img.shields.io/github/v/tag/moritzbru/jsonresume-theme-reactive?style=flat-square&logo=github)](https://github.com/MoritzBru/jsonresume-theme-reactive/releases)
+[![NPM Version](https://img.shields.io/npm/v/jsonresume-theme-reactive?style=flat-square&logo=npm)](https://www.npmjs.com/package/jsonresume-theme-reactive)
+
 A flat and reactive [JSON Resume](https://jsonresume.org/) theme.
 
 - 🤖 strongly typed with TypeScript
