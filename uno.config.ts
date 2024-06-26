@@ -19,6 +19,10 @@ export default defineConfig({
           weights: ['300', '400', '700'],
           italic: true,
         },
+        mono: {
+          name: 'Space Mono',
+          weights: ['400', '600'],
+        },
       },
     }),
   ],
@@ -33,7 +37,7 @@ export default defineConfig({
     list: 'ml-4 mt-1 list-disc list-outside font-light leading-tight marker:text-secondary',
     subheading: 'font-bold opacity-75',
     summary: 'mt-1 text-justify text-pretty font-light leading-tight',
-    time: 'shrink-0 font-bold font-mono opacity-75',
+    time: 'shrink-0 font-semibold font-mono opacity-75',
   },
   safelist: [
     // icons for basics.profile
