@@ -1,4 +1,4 @@
-import { micromark } from 'micromark';
+import { marked } from 'marked';
 
 export function html2txt(htmlString: string) {
   const tagRegEx = /(<([^>]+)>)/gi;
@@ -6,7 +6,7 @@ export function html2txt(htmlString: string) {
 }
 
 export function md2html(mdString: string) {
-  return micromark(mdString);
+  return marked.parse(mdString) as string;
 }
 
 export function md2txt(mdString: string) {
