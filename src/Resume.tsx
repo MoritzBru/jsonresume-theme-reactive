@@ -1,5 +1,7 @@
 import { RawHtml } from 'static-jsx';
 import type { ResumeSchema } from '../resumeSchema.d.ts';
+import style from './style.css?inline';
+
 import Head from './components/Head';
 import Theme from './components/Theme';
 import Basics from './components/Basics';
@@ -15,7 +17,7 @@ import Volunteer from './components/Volunteer';
 import Awards from './components/Awards';
 import Publications from './components/Publications';
 
-const Resume = ({ resume, style }: { resume: ResumeSchema; style: string }) => (
+const Resume = ({ resume }: { resume: ResumeSchema }) => (
   <>
     {new RawHtml('<!DOCTYPE html>')}
     <html lang={resume?.meta?.language ?? 'en'}>
