@@ -38,8 +38,8 @@
   },
   "scripts": {
     "build": "vite build",
-    "dev": "tsup src/index.ts --watch --onSuccess \"resumed render resume.json --theme ../../../dist/index.cjs && http-server\"",
-    "dev:render": "resumed render resume.json --theme ../../../dist/index.js",
+    "render": "resumed render resume.json --theme ../../../dist/index.js --output dist/resume.html",
+    "dev": "vite build --watch --mode development",
     "lint": "eslint .",
     "prepare": "json2ts node_modules/resume-schema/schema.json resumeSchema.d.ts && resumed init",
     "prepublishOnly": "npm run lint && npm run build",
