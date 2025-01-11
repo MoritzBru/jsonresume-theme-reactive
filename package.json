@@ -39,7 +39,7 @@
   "scripts": {
     "build": "vite build",
     "render": "resumed render resume.json --theme ../../../dist/index.js --output dist/resume.html",
-    "dev": "vite build --watch --mode development",
+    "dev": "vite build --watch --mode development & vite preview --open resume.html",
     "lint": "eslint .",
     "prepare": "json2ts node_modules/resume-schema/schema.json resumeSchema.d.ts && resumed init",
     "prepublishOnly": "npm run lint && npm run build",
