@@ -19,7 +19,7 @@ const Position = (position: Exclude<ResumeSchema['work'], undefined>[number]) =>
             <span class="subheading">{position.name}</span>
           </MaybeLink>
         )}
-        {position.location && <p class="opacity-75">{position.location}</p>}
+        {position.location && <p class="opacity-80">{position.location}</p>}
       </div>
       {position.description && (<p class="font-light leading-tight">{position.description}</p>)}
       {position.summary && (
