@@ -9,6 +9,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 ### Changed
 
 - Use vite for build and dev
+- Fixed font loading
+
+### Removed
+
+- Monospace font
 
 ## [0.3.0] - 2024-06-27
 

@@ -13,15 +13,14 @@ export default defineConfig({
     presetIcons(),
     presetWebFonts({
       provider: 'bunny',
+      timeouts: {
+        warning: 10e3,
+        failure: 30e3,
+      },
       fonts: {
         sans: {
           name: 'Space Grotesk',
-          weights: ['300', '400', '700'],
-          italic: true,
-        },
-        mono: {
-          name: 'Space Mono',
-          weights: ['400', '600'],
+          weights: ['300', '400', '600', '700'],
         },
       },
     }),
@@ -35,9 +34,9 @@ export default defineConfig({
     array: 'mt-2 flex flex-col gap-2',
     between: 'flex justify-between gap-x-1',
     list: 'ml-4 mt-1 list-disc list-outside font-light leading-tight marker:text-secondary',
-    subheading: 'font-bold opacity-75',
+    subheading: 'font-semibold opacity-80',
     summary: 'mt-1 text-justify text-pretty font-light leading-tight',
-    time: 'shrink-0 font-semibold font-mono opacity-75',
+    time: 'shrink-0 font-semibold tabular-nums opacity-80',
   },
   safelist: [
     // icons for basics.profile
