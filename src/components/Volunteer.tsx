@@ -36,7 +36,7 @@ const Position = (position: Exclude<ResumeSchema['volunteer'], undefined>[number
 const Volunteer = ({ volunteer }: { volunteer: ResumeSchema['volunteer'] }) => (
   <>
     {volunteer?.length && (
-      <section class="m-4">
+      <section>
         <SectionHeading>{i18n['sections.volunteer']}</SectionHeading>
         <div class="array">
           {volunteer.map((volunteer) => Position(volunteer))}

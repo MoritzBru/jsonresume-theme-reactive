@@ -12,7 +12,7 @@ const Skill = (skill: Exclude<ResumeSchema['skills'], undefined>[number]) => (
 const Skills = ({ skills }: { skills: ResumeSchema['skills'] }) => (
   <>
     {skills?.length && (
-      <section class="m-4">
+      <section>
         <SectionHeading>{i18n['sections.skills']}</SectionHeading>
         <dl class="grid grid-cols-2 mt-2 gap-2 [&>*:nth-child(odd):last-child]:col-span-2">
           {skills.map((skill) => Skill(skill))}

@@ -12,7 +12,7 @@ const Language = (language: Exclude<ResumeSchema['languages'], undefined>[number
 const Languages = ({ languages }: { languages: ResumeSchema['languages'] }) => (
   <>
     {languages?.length && (
-      <section class="m-4">
+      <section>
         <SectionHeading>{i18n['sections.languages']}</SectionHeading>
         <dl class="array">
           {languages.map((language) => Language(language))}

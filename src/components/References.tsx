@@ -14,7 +14,7 @@ const Reference = (reference: Exclude<ResumeSchema['references'], undefined>[num
 const References = ({ references }: { references: ResumeSchema['references'] }) => (
   <>
     {references?.length && (
-      <section class="m-4">
+      <section>
         <SectionHeading>{i18n['sections.references']}</SectionHeading>
         <div class="array">
           {references.map((reference) => Reference(reference))}

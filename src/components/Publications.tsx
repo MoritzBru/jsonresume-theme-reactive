@@ -30,7 +30,7 @@ const Publication = (publication: Exclude<ResumeSchema['publications'], undefine
 const Publications = ({ publications }: { publications: ResumeSchema['publications'] }) => (
   <>
     {publications?.length && (
-      <section class="m-4">
+      <section>
         <SectionHeading>{i18n['sections.publications']}</SectionHeading>
         <div class="array">
           {publications.map((publication) => Publication(publication))}

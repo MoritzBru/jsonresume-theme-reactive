@@ -25,7 +25,7 @@ const Award = (award: Exclude<ResumeSchema['awards'], undefined>[number]) => (
 const Awards = ({ awards }: { awards: ResumeSchema['awards'] }) => (
   <>
     {awards?.length && (
-      <section class="m-4">
+      <section>
         <SectionHeading>{i18n['sections.awards']}</SectionHeading>
         <div class="array">
           {awards.map((award) => Award(award))}

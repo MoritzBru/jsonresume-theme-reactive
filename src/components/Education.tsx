@@ -32,7 +32,7 @@ const Position = (position: Exclude<ResumeSchema['education'], undefined>[number
 const Education = ({ education }: { education: ResumeSchema['education'] }) => (
   <>
     {education?.length && (
-      <section class="m-4">
+      <section>
         <SectionHeading>{i18n['sections.education']}</SectionHeading>
         <div class="array">
           {education.map((education) => Position(education))}

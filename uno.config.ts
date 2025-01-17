@@ -26,6 +26,7 @@ export default defineConfig({
     }),
   ],
   rules: [
+    ['text-sm', { 'font-size': '9pt' }],
     ['text-base', { 'font-size': '10pt' }],
     ['text-lg', { 'font-size': '11pt' }],
     ['text-xl', { 'font-size': '13pt' }],
