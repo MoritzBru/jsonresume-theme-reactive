@@ -37,7 +37,7 @@ const Project = (project: Exclude<ResumeSchema['projects'], undefined>[number]) 
 const Projects = ({ projects }: { projects: ResumeSchema['projects'] }) => (
   <>
     {projects?.length && (
-      <section class="m-4">
+      <section>
         <SectionHeading>{i18n['sections.projects']}</SectionHeading>
         <div class="array">
           {projects.map((project) => Project(project))}

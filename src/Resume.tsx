@@ -16,6 +16,7 @@ import Education from './components/Education';
 import Volunteer from './components/Volunteer';
 import Awards from './components/Awards';
 import Publications from './components/Publications';
+import LastModified from './components/LastModified';
 
 const Resume = ({ resume }: { resume: ResumeSchema }) => (
   <>
@@ -28,22 +29,23 @@ const Resume = ({ resume }: { resume: ResumeSchema }) => (
       </head>
       <body class="bg-white text-black font-sans text-base dark:bg-gray-900 dark:text-white">
         <main class="grid mx-auto max-w-[210mm] min-h-[297mm] md:grid-cols-[1fr_2fr]">
-          <div class="bg-primary-200 text-black dark:bg-primary-800 dark:text-white">
-            <Basics basics={resume?.basics} />
+          <div class="flex flex-col gap-y-4 bg-primary-200 px-5 text-black dark:bg-primary-800 dark:text-white">
+            <Basics basics={resume?.basics} className="-mx-5" />
             <Summary basics={resume?.basics} className="block md:hidden" />
             <Skills skills={resume?.skills} />
             <Languages languages={resume?.languages} />
             <Interests interests={resume?.interests} />
             <References references={resume?.references} />
           </div>
-          <div>
-            <Summary basics={resume?.basics} className="hidden md:block" />
+          <div class="mx-5 flex flex-col gap-y-4">
+            <Summary basics={resume?.basics} className="hidden -mx-5 md:block" />
             <Work work={resume?.work} />
             <Projects projects={resume?.projects} />
             <Education education={resume?.education} />
             <Volunteer volunteer={resume?.volunteer} />
             <Awards awards={resume?.awards} />
             <Publications publications={resume?.publications} />
+            <LastModified meta={resume?.meta} />
           </div>
         </main>
       </body>

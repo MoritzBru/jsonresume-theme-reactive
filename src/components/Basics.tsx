@@ -1,7 +1,7 @@
 import type { ResumeSchema } from '../../resumeSchema.d.ts';
 
-const Basics = ({ basics }: { basics: ResumeSchema['basics'] }) => (
-  <header class="bg-primary-500 p-4 text-white">
+const Basics = ({ basics, className }: { basics: ResumeSchema['basics']; className?: string }) => (
+  <header class={['bg-primary-500 px-5 py-4 text-white', className].filter(Boolean).join(' ')}>
     {basics?.image && <img src={basics.image} alt="portrait" class="mx-auto w-4/5 border-2 border-white rounded-full" />}
     {basics?.name && <h1 class="mt-2 font-bold text-xl">{basics.name}</h1>}
     {basics?.label && <h2 class="text-lg">{basics.label}</h2>}

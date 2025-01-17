@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 
 ## [Unreleased]
 
+### Added
+
+- Last modified date shown at the bottom
+
 ## [0.4.0] - 2025-01-12
 
 ### Changed
